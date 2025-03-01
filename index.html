@@ -17,64 +17,70 @@
     display: grid;
     grid-template-areas:
         "header header"
-        "menu content"
+        "inicio inicio"
         "footer footer"
         "seEvol seEvol"
         "blog-text blog"
         "contact contact";
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 70px auto 250px; /* Reduzindo a altura do header */
+    grid-template-rows: 70px auto auto; 
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 20px;
     height: 100%;
 }
-
         .grid > div {
           background-color:  black;
-          padding: 10px;
+          padding: 0px 10px;
         }
 
         .grid > div.header {
     grid-area: header;
     text-align: center;
+    height: 100%;
+    margin-top: 16px;
+    margin-top: 16px;
            }
            .grid > div.contact {
     grid-area: contact;
     text-align: center;
-    background-color: white;
-    margin-top: 60px;
+    background-color: gray;
+    margin: 30px 0px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
            }
 
-
-        .grid > div.content {
-          grid-area: content;
-          overflow: auto; 
-          justify-content: space-between;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          padding-bottom: 80px;
-        }
-
         .grid > div.footer {
           grid-area: footer;
+        }
+
+        .grid > div.inicio {
+          grid-area: inicio;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://placehold.co/600x400/EEE/31343C');
+    background-size: cover;
+    background-position: center;
+    margin: 30px 0px;
+    padding-left: 24px;
+    padding-right: 0px;
+          
         }
 
         .grid > div.blog {
           grid-area: blog;
           display: flex;
           justify-content: center;
-          background-color: white;
+          background-color: gray;
 
         }
 
         .grid > div.blog-text {
           grid-area: blog-text;
-          background-color: white;
-          color: black;
+          background-color: gray;
+          color: white;
         }
 
         .grid > div.seEvol {
@@ -87,15 +93,15 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    height: 100%;
     position: relative;
+    margin: 30px 0px;
 }
 
         .project {
-    width: 190px; 
-    height: 120px; 
+    width: 290px; 
+    height: 220px; 
     background: rgb(50, 50, 50); 
-    border-radius: 24px; 
+    border-radius: 8px; 
     color: white;
     box-shadow: 
         12px 12px 45px black, 
@@ -113,11 +119,16 @@
     padding: 20px;
     flex-wrap: wrap; 
     border-radius: 8px;
+    height: auto;
 }
 
 .menu img{
     border-radius: 50%;
     padding: 12px;
+}
+
+.menu {
+    width: 500px;
 }
 
 .seContato 
@@ -153,7 +164,6 @@ img{
 }
 
 .seTitulo {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -177,6 +187,7 @@ img{
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 10px; 
+    margin: 30px 0px;
 }
 
 .desemp {
@@ -186,11 +197,7 @@ img{
     width: 400px;
 }
 
-.evol {
-    background-color: white;
-    color: black;
-    height: 700px;
-}
+
 
 .opcContact {
     background-color: rgb(50, 50, 50);
@@ -251,15 +258,110 @@ img{
 }
 
 .blog, .blog-text {
-    margin-top: 60px;
-    background-color: white;
+    margin: 30px 0px;
     height: 400px;
 }
 
 .contact {
-    background-color: white;
     height: 300px;
 }
+
+.abaBand {
+    display: flex;
+}
+
+
+.descBand {
+    width: 450px;
+}
+
+.selistMusic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px
+}
+
+.selistMusic h1 {
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+.listMusic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.bandMusic img{
+    margin-right: 16px;
+    border-radius: 8px;
+}
+
+.wppBanda {
+        margin-top: 24px;
+}
+
+.tab-content {
+    background-size: cover;
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Definindo imagens diferentes para cada aba */
+#band1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://placehold.co/600x400/EEE/31343C');
+    background-size: cover;
+    background-position: center;
+}
+
+#band2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://placehold.co/600x400/EEE/31343C');
+    background-size: cover;
+    background-position: center;
+}
+
+#band3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://placehold.co/600x400/EEE/31343C');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.textBand {
+    display: flex;
+    width: 450px;
+    padding: 30px;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.instBand img {
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
 
     </style>
 </head>
@@ -271,34 +373,24 @@ img{
             <nav class="navbar">
                 <h1>Trieste</h1>   
             <div class="navOpcoes">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
-                     </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Musicas<span class="sr-only"></span></a>
-                     </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Shows e Bandas<span class="sr-only"></span></a>
-                     </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Blog<span class="sr-only"></span></a>
-                     </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Contatos<span class="sr-only"></span></a>
-                     </li>
-                </ul>
+                <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
+                <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
+                <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
+                <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
+                <a class="nav-link" href="#home">Inicio<span class="sr-only"></span></a>
             </div>
         </nav>
     </div>
+        </div>
+        <div class="inicio">
+        <div class="menu">
+            <div class="sePerfil">
+                <img src="https://placehold.co/250x250/EEE/31343C" alt="">
+                <div class="seContact">
+                </div>
+            </div>
+            <h3>Sobre mim</h3>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
         </div>
         <div class="content">
             <div class="opcContact">
@@ -315,14 +407,7 @@ img{
                 </div>
         </div>
         </div>
-        <div class="menu">
-            <div class="sePerfil">
-                <img src="https://placehold.co/250x250/EEE/31343C" alt="">
-                <div class="seContact">
-                </div>
-            </div>
-            <h3>Sobre mim</h3>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p></div>
+        </div>
         <div class="footer">
             <div class="seTitulo">
                 <h4>Musicas</h4>
@@ -368,11 +453,132 @@ img{
         </div>
         <div class="evol">
             <h1>Bandas</h1>
+            <div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Banda 1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Banda 2</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Banda 3</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active abaBand" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="abaBand" id="band1">
+                        <div class="descBand">
+                        <div class="textBand">
+                        <h1>Nome banda</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium a nam distinctio iusto, natus perspiciatis necessitatibus molestiae nesciunt harum consequatur</p>
+                        <div class="instBand">
+                        <img src="https://placehold.co/32x32/EEE/31343C" alt="">Instragram: @teste.com
+                    </div>
+                        <div class="wppBanda">
+                        <button class="btn btn-primary">WhatsApp</button>
+                    </div>
+                    </div>
+                    </div>
+                        <div class="selistMusic">
+                            <h1>Musicas</h1>
+                            <div class="listMusic">
+                                <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                            </div>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="abaBand" id="band2">
+                            <div class="descBand">
+                                <div class="textBand">
+                            <h1>Nome banda</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium a nam distinctio iusto, natus perspiciatis necessitatibus molestiae nesciunt harum consequatur</p>
+                            <div class="instBand">
+                            <img src="https://placehold.co/32x32/EEE/31343C" alt="">Instragram: @teste.com
+                        </div>
+                            <div class="wppBanda">
+                            <button class="btn btn-primary">WhatsApp</button>
+                        </div>
+                        </div>
+                        </div>
+                            <div class="selistMusic">
+                                <h1>Musicas</h1>
+                                <div class="listMusic">
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                </div>
+                             </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                        <div class="abaBand" id="band3">
+                            <div class="descBand">
+                                <div class="textBand">
+                            <h1>Nome banda</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium a nam distinctio iusto, natus perspiciatis necessitatibus molestiae nesciunt harum consequatur</p>
+                            <div class="instBand">
+                            <img src="https://placehold.co/32x32/EEE/31343C" alt="">Instragram: @teste.com
+                        </div>
+                            <div class="wppBanda">
+                            <button class="btn btn-primary">WhatsApp</button>
+                        </div>
+                        </div>
+                        </div>
+                            <div class="selistMusic">
+                                <h1>Musicas</h1>
+                                <div class="listMusic">
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                </div>
+                             </div>
+                            </div>
+                    </div>
+                    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                        <div class="abaBand">
+                            <div class="descBand">
+                                <div class="textBand">
+                            <h1>Nome banda</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur praesentium a nam distinctio iusto, natus perspiciatis necessitatibus molestiae nesciunt harum consequatur</p>
+                            <div class="instBand">
+                            <img src="https://placehold.co/32x32/EEE/31343C" alt="">Instragram: @teste.com
+                        </div>
+                            <div class="wppBanda">
+                            <button class="btn btn-primary">WhatsApp</button>
+                        </div>
+                        </div>
+                        </div>
+                            <div class="selistMusic">
+                                <h1>Musicas</h1>
+                                <div class="listMusic">
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                    <div class="bandMusic"><img src="https://placehold.co/32x32/EEE/31343C" alt="">Music x</div>
+                                </div>
+                             </div>
+                            </div>
+                    </div>
+                  </div>
+            </div>
        </div>
         </div>
         <div class="blog-text">
             <h3>Sobre mim</h3>
-            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p></div>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. 
+                Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
+            </div>
         <div class="blog">
             <div class="ftBlog">
                 <img src="https://placehold.co/250x250/EEE/31343C" alt="">
