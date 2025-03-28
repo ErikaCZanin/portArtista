@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./bootstrap.min.css"/>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <title>Document</title>
     <style>
         html, body {
           background-color: black;
           color: #e4e7f3;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
         }
 
 
@@ -45,7 +54,7 @@
     grid-area: contact;
     text-align: center;
     background-color: gray;
-    margin: 30px 0px;
+    margin: 60px 0px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
            }
@@ -85,6 +94,7 @@
 
         .grid > div.seEvol {
           grid-area: seEvol;
+          margin: 60px 0;
         }
 
         .footer {
@@ -98,7 +108,6 @@
 }
 
         .project {
-    width: 290px; 
     height: 220px; 
     background: rgb(50, 50, 50); 
     border-radius: 8px; 
@@ -108,12 +117,11 @@
         -4px -4px 40px rgba(255, 255, 255, 0.401); 
         padding: 24px;
     border: 0.5px solid #7174a7ef;
-    
 }  
 
 .seProject {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px;
@@ -122,23 +130,24 @@
     height: auto;
 }
 
-.menu img{
-    border-radius: 50%;
-    padding: 12px;
-}
 
 .menu {
     width: 500px;
+    min-height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 900px;
 }
 
 .seContato 
 img{
     border-radius: 50%;
-}
-
-.sePerfil {
-    display: block;
-
 }
 
 .seContact {
@@ -191,7 +200,6 @@ img{
 }
 
 .desemp {
-    background-color: #343758; /* Apenas para visualização */
     padding: 10px;
     height: 500px;
     width: 400px;
@@ -203,24 +211,18 @@ img{
     background-color: rgb(50, 50, 50);
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
-    padding-left: 20px;
+    padding-left: 30px;
     padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 30px;
     color: white;
+    width: 390px;
 }
 
-
-.desemp {
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-}
 
 .nav {
     display: flex;
     justify-content: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 .navbar-nav {
@@ -362,6 +364,171 @@ img{
     border-radius: 50%;
 }
 
+.blog-project {
+    height: 90px;
+    width: 90px;
+    background-color: #5e63a3;
+}
+
+.blog-project img {
+    width: 100%;
+}
+
+.blog-project h1 {
+    font-size: 18px;
+}
+
+.blog-projects {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    padding-top: 16px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: nowrap;
+    user-select: none;
+}
+
+.projects .project {
+    user-select: none;
+}
+
+.blog-project h1 {
+    padding-top: 8px;
+}
+
+.blog-dados {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.blog-dados {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.princProjects {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0px 24px;
+}
+
+.blog-sobre {
+    padding: 24px;
+}
+
+.contact-conteudo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contect-opcoes {
+    width: 450px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact-redes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-red {
+    background-color: rgb(84, 84, 84);
+    width: 140px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    gap: 8px;
+}
+
+.contact-redes-baixo {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.cardShow {
+    display: flex;
+    min-height: 80px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.datShow {
+    width: 20%;
+    text-align: center;
+}
+
+.descShow {
+    width: 80%;
+    padding: 0px 8px;
+}
+
+.diaShow {
+    background-color: #343758;
+    height: 70%;
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    border: 2px solid black;
+}
+
+
+.mesShow {
+         height: 30%;
+}
+
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.infohoraShow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.infoShow {
+    margin-top: 6px;
+}
+
+.cardShows {
+    display: flex;
+    gap: 32px; /* Define o espaço entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+}
+
+.opHard {
+    margin-top: 28px;
+}
+
+.bandShow {
+    color: rgb(136, 207, 136);
+}
+
+
 
     </style>
 </head>
@@ -384,13 +551,10 @@ img{
         </div>
         <div class="inicio">
         <div class="menu">
-            <div class="sePerfil">
-                <img src="https://placehold.co/250x250/EEE/31343C" alt="">
-                <div class="seContact">
-                </div>
-            </div>
+            <div class="desc">
             <h3>Sobre mim</h3>
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
+            </div>
         </div>
         <div class="content">
             <div class="opcContact">
@@ -413,22 +577,26 @@ img{
                 <h4>Musicas</h4>
             
             </div>
-            <div class="seProject">
-                <div>
-                    <
-                </div>
-            <div class="project">
+            <div class="seProject swiper">
+            <div class="carousel">
+                <div class="projects swiper-wrapper">
+            <div class="project swiper-slide">
                 Projeto 1
             </div>
-            <div class="project">
+            <div class="project swiper-slide">
                 Projeto 2
             </div>
-            <div class="project">
+            <div class="project swiper-slide">
                 Projeto 5
             </div>
-            <div>
-                >
+            <div class="project swiper-slide">
+                Projeto 5
             </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
         </div>
         </div>
         <div class="seEvol">
@@ -436,17 +604,47 @@ img{
             <div class="dadDesempenho">
                 <h1 href="#">Proximos shows</h1>
                 <div class="opHard">
-                    <div class="opL">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
-                    </div>
-                    <div class="opE">
-                        <ol>
-                            <li>Teste1</li>
-                            <li>Teste2</li>
-                        </ol>
+                    <div class="cardShows">
+                                <div class="cardShow">
+                                    <div class="datShow">
+                                        <div class="diaShow">
+                                            <h1>23</h1>
+                                        </div>
+                                        <div class="mesShow">Mes</div>
+                                    </div>
+                                    <div class="descShow">
+                                        <div class="bandShow">
+                                            Nome banda
+                                        </div>
+                                        <div class="infohoraShow">
+                                           <Div class="horShow">12:40</Div>
+                                           <Div class="localShow">Florianopolis-SC</Div>
+                                        </div>
+                                        <div class="infoShow">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cardShow">
+                                    <div class="datShow">
+                                        <div class="diaShow">
+                                            <h1>23</h1>
+                                        </div>
+                                        <div class="mesShow">Mes</div>
+                                    </div>
+                                    <div class="descShow">
+                                        <div class="bandShow">
+                                            Nome banda
+                                        </div>
+                                        <div class="infohoraShow">
+                                           <Div class="horShow">12:40</Div>
+                                           <Div class="localShow">Florianopolis-SC</Div>
+                                        </div>
+                                        <div class="infoShow">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -575,10 +773,32 @@ img{
        </div>
         </div>
         <div class="blog-text">
-            <h3>Sobre mim</h3>
+            <div class="blog-dados">
+            <div class="blog-sobre">
+                <h1>Sobre mim</h1>
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. 
-                Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
+                Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.
+            </p>
             </div>
+            <div class="princProjects">
+                <h4>Principais projetos</h4>
+                <div class="blog-projects">
+                    <div class="blog-project">
+                        <img src="https://placehold.co/50x50/EEE/31343C" alt="">
+                        <h1>Projeto 1</h1>
+                    </div>
+                    <div class="blog-project">
+                        <img src="https://placehold.co/50x50/EEE/31343C" alt="">
+                        <h1>Projeto 2</h1>
+                    </div>
+                    <div class="blog-project">
+                        <img src="https://placehold.co/50x50/EEE/31343C" alt="">
+                        <h1>Projeto 3</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <div class="blog">
             <div class="ftBlog">
                 <img src="https://placehold.co/250x250/EEE/31343C" alt="">
@@ -588,9 +808,43 @@ img{
     </div>
 
     <div class="contact">
+        <div class="contact-conteudo">
+            <div class="contect-opcoes">
+            <div>
+                <h1>Nome do Artista</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maxime, beatae ut, mollitia nostrum neque cupiditate, laborum labore commodi</p>
+            </div>
+            <div class="contact-redes">
+                <div class="contact-red">
+                    <img src="https://placehold.co/15x15/EEE/31343C" alt="">
+                    email
+                </div>
+                <div class="contact-red">
+                    <img src="https://placehold.co/15x15/EEE/31343C" alt="">
+                    telefone
+                </div>
+                <div class="contact-red">
+                    <img src="https://placehold.co/15x15/EEE/31343C" alt="">
+                    facebook
+                </div>
+            </div>
+            <div class="contact-redes-baixo">
+                <div class="contact-red">
+                    <img src="https://placehold.co/15x15/EEE/31343C" alt="">
+                    Instragram
+                </div>
+                <div class="contact-red">
+                    <img src="https://placehold.co/15x15/EEE/31343C" alt="">
+                    Youtube
+                </div>
+            </div>
+            </div>
+        </div>
 
     </div>
       </div>
     <script src="./bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
